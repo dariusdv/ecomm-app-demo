@@ -3,5 +3,15 @@
     "email": "test@test.com",
     "id": "d67a6960",
     "password": "mypass"
+  },
+  {
+    "email": "tesst@test.com",
+    "password": "ras",
+    "id": "12c25e9d"
+  },
+  {
+    "email": "test3@test.com",
+    "password": "cv",
+    "id": "2bc6a6a1"
   }
 ]
