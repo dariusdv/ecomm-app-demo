@@ -34,7 +34,7 @@ app.post('/signup', async (req, res) => {
 		return res.send('Email in use');
 	}
 
-	if (password != passwordConfirmation) {
+	if (password !== passwordConfirmation) {
 		return res.send('Passwords must match');
 	}
 
@@ -73,11 +73,12 @@ app.post('/signin', async (req, res) => {
 		return res.send('Email not found');
 	}
 
-	if (user.password !== password) {
+	const validPassword = await usersRepo.comparePasswords(user.password, password);
+	if (!validPassword) {
 		res.send('Invalid password');
 	}
 
-	req.session.userId = user.Id;
+	req.session.userId = user.id;
 
 	res.send('You are signed in');
 });
