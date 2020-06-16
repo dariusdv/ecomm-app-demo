@@ -10,10 +10,9 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
 	cookieSession({
-		keys: [ 'sd2131rsad3ec34f24vsd3f23csd3' ]
+		keys: [ 'lkasld235j' ]
 	})
 );
-
 app.use(authRouter);
 app.use(productsRouter);
 
